@@ -59,10 +59,13 @@ databaseRef.on("value", function(snapshot) {
   });
   
 var merah1 = document.querySelector(".merah1");
+var kuning1 = document.querySelector(".kuning1");
 var hijau1 = document.querySelector(".hijau1");
 var merah2 = document.querySelector(".merah2");
+var kuning2 = document.querySelector(".kuning2");
 var hijau2 = document.querySelector(".hijau2");
 var merah3 = document.querySelector(".merah3");
+var kuning3 = document.querySelector(".kuning3");
 var hijau3 = document.querySelector(".hijau3");
 
 databaseReflamp.on("value", function(snapshot) {
@@ -73,7 +76,7 @@ databaseReflamp.on("value", function(snapshot) {
     }
 
     // Reset the classes on all traffic lights
-    [merah1, hijau1, merah2, hijau2, merah3, hijau3].forEach(function(light) {
+    [merah1, kuning1, hijau1, merah2, kuning2, hijau2, merah3, kuning3, hijau3].forEach(function(light) {
         light.classList.remove("on");
     });
 
@@ -82,18 +85,25 @@ databaseReflamp.on("value", function(snapshot) {
         hijau1.classList.add("on");
     } else if (data.lampumerah1 === true) {
         merah1.classList.add("on");
+    } else if (data.lampukuning1 === true) {
+        kuning1.classList.add("on");
     }
 
     if (data.lampuhijau2 === true) {
         hijau2.classList.add("on");
     } else if (data.lampumerah2 === true) {
         merah2.classList.add("on");
+    } else if (data.lampukuning2 === true) {
+        kuning2.classList.add("on");
     }
 
     if (data.lampuhijau3 === true) {
         hijau3.classList.add("on");
     } else if (data.lampumerah3 === true) {
         merah3.classList.add("on");
+    }
+    else if (data.lampukuning3 === true) {
+        kuning3.classList.add("on");
     }
 });
 

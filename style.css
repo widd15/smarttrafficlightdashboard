@@ -147,8 +147,28 @@
     background-color: #66ff66;
     transition: background-color 0.5s;
   }
-  .yellow {
+  .kuning1 {
     background-color: #c8d145;
+    transition: background-color 0.5s;
+  }
+  .kuning1.on {
+    background-color: #eeff00;
+    transition: background-color 0.5s;
+  }
+  .kuning2 {
+    background-color: #c8d145;
+    transition: background-color 0.5s;
+  }
+  .kuning2.on {
+    background-color: #eeff00;
+    transition: background-color 0.5s;
+  }
+  .kuning3 {
+    background-color: #c8d145;
+    transition: background-color 0.5s;
+  }
+  .kuning3.on {
+    background-color: #eeff00;
     transition: background-color 0.5s;
   }
   .indicator {
